@@ -1,9 +1,9 @@
 module.exports = {
     ACCESS_TOKEN_SECRET: 'EMMA123',
     DB: {
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'sephory'
+        host: 'mysql-salhammuti.alwaysdata.net',
+        user: 'salhammuti',
+        password: 'sabrina080802*',
+        database: 'salhammuti_sephory'
     }
 };
