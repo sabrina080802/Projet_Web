@@ -28,4 +28,3 @@ fs.readdirSync(apiRoutesDir, { recursive: true }).forEach((file) => {
 });
 
 app.listen(PORT, '0.0.0.0');
-app.listen(PORT, '::');
