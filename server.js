@@ -15,7 +15,6 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
-app.use(express.static(path.join(__dirname, 'Sephory/dist/sephory')));  // Spécifie le chemin de ton build Angular
 
 
 const apiRoutesDir = path.join(__dirname, 'routes');
@@ -28,10 +27,5 @@ fs.readdirSync(apiRoutesDir, { recursive: true }).forEach((file) => {
         console.log(`Route -> /${routePath} loaded`);
     }
 });
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Sephory/dist/sephory/index.html'));
-});
-
 
 app.listen(PORT, '0.0.0.0');
