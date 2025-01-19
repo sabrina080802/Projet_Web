@@ -1,0 +1,38 @@
+.basket {
+    display: flex;
+    align-items: flex-start;
+
+    .hideable {
+        max-width: 100%;
+        opacity: 1;
+        flex: 1;
+        transition: opacity .25s ease-out, margin-right .35s ease-out;
+
+        &:not([show]) {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    .payment {
+        margin: 1em;
+
+        .cancel {
+            background-color: var(--tertiary);
+            color: white;
+            font-size: 1.1em;
+            padding: .5em;
+            border-radius: .5em;
+            color: white;
+            border: none;
+        }
+    }
+}

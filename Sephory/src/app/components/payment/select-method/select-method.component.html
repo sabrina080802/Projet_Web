@@ -1,0 +1,16 @@
+<div class="payment-step">
+    <h2>Méthode de paiement</h2>
+    <div class="card-list">
+        <div *ngFor="let card of cards" class="card" (click)="onSelectCard(card)" [attr.active]="card.selected ? true : null">
+            <p class="owner">{{card.card_owner}}</p>
+            <p class="expiry-date">Expire le {{ getExpiryDate(card) }}</p>
+            <p class="number">{{card.card_number}}</p>
+
+            <button (click)="removeCard(card)">Supprimer</button>
+        </div>
+    </div>
+    <div class="choice-menu">
+        <button (click)="onNewCard()">Ajouter une nouvelle carte</button>
+        <button (click)="onValidate()">Valider</button>
+    </div>
+</div>

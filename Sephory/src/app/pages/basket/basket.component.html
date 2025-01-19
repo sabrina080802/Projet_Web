@@ -1,0 +1,7 @@
+<div class="basket">
+    <div class="hideable product-list" [attr.show]="currentAction == 0 ? true : null">
+        <app-product *ngFor="let item of basketContent; trackBy: trackByProductId" [product]="item.product" [quantity]="item.quantity" [basketManage]="true"/>
+    </div>
+
+    <app-basket-recap [navigateToCommand]="true"/>
+</div>

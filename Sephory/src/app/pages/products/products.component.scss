@@ -1,0 +1,51 @@
+.shop {
+    display: flex;
+    flex-wrap: wrap;
+
+    .product-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: .5em;
+        border-radius: .6em;
+        flex: 1;
+    }
+
+    .product-pages {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 2em;
+        margin-bottom: 5em;
+
+        button {
+            font-size: 1.1em;
+            background-color: var(--tertiary);
+            font-weight: bold;
+            color: white;
+            margin: .25em;
+            border-radius: .15em;
+            border: 2px solid transparent;
+            width: 2em;
+            height: 2em;
+            cursor: pointer;
+
+            &[active] {
+                background-color: transparent;
+                border-color: var(--tertiary);
+            }
+        }
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

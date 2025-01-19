@@ -1,0 +1,37 @@
+.basket-toggle {
+    position: fixed;
+    width: 5em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .5);
+    bottom: 2em;
+    right: 2em;
+    border-radius: 150px;
+    cursor: pointer;
+    border: 4px solid var(--secondary);
+
+    img {
+        height: 3em;
+    }
+
+    span {
+        position: absolute;
+        bottom: -.5em;
+        right: -.5em;
+        background-color: white;
+        border: 2px solid var(--secondary);
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 150px;
+        color: var(--secondary);
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4em;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, .5);
+    }
+}

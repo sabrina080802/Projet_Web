@@ -1,0 +1,17 @@
+<div class="product">
+    <img src="{{product.image}}" alt="{{product.name}}">
+    <h2>{{product.name}}</h2>
+    <p class="description">{{product.description}}</p>
+
+    <div *ngIf="basketManage" class="basket-management">
+        <button (click)="dropProductFromCart()">-</button>
+        <span>{{ quantity }}</span>
+        <button (click)="addProductToCart()">+</button>
+    </div>
+
+    <button *ngIf="basketManage == false" (click)="addProductToCart()" class="btn-add-cart">
+        <img src="/photo/panier.png">
+    </button>
+    
+    <p class="price">{{ (basketManage ? product.price * quantity : product.price) / 100| currency: 'EUR' }}</p>
+</div>

@@ -1,0 +1,19 @@
+<div class="basket-recap">
+    <h2>Récapitulatif de commande</h2>
+    <div class="product-recaps">
+        <div *ngFor="let item of basketContent; trackBy: trackByProductId" class="product-recap">
+            <p>{{ item.product.name }}</p>
+            <div>
+                <span>x{{item.quantity}}</span>
+                <span>{{(item.quantity * item.product.price) / 100 | currency: 'EUR'}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="command-total">
+        Total : {{ total | currency : 'EUR'}}
+    </div>
+    <hr>
+
+    <button *ngIf="navigateToCommand" (click)="command()" class="btn-command">Commander</button>
+    <button (click)="backToShop()" class="btn-continue">Continuer mes achats</button>
+</div>

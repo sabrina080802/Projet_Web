@@ -1,0 +1,25 @@
+<div class="payment-step">
+    <h2>
+        <button (click)="onBack()">Retour</button>
+        Ajouter une nouvelle carte de paiement
+    </h2>
+    
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="card_number">Nom du propriétaire :</label>
+            <input type="text" name="card_owner" [(ngModel)]="card_owner" required>
+        </div>
+        <div class="form-group">
+            <label for="card_number">Numéro de carte :</label>
+            <input type="text" name="card_number" [(ngModel)]="card_number" required>
+        </div>
+        <div class="form-group">
+            <label for="card_cvc">CVC :</label>
+            <input type="text" name="card_cvc" [(ngModel)]="card_cvc" required>
+
+            <label for="card_expire">Date d'expiration :</label>
+            <input type="month" name="card_expire" [(ngModel)]="card_expire" required>
+        </div>
+        <button>Valider</button>
+    </form>
+</div>

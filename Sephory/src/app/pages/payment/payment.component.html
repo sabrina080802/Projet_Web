@@ -1,0 +1,20 @@
+<div class="payment">
+    <app-basket-recap [navigateToCommand]="false"/>
+
+    <div class="payment-wizard">
+        <ng-container [ngSwitch]="currentStep">
+            <app-select-method
+                *ngSwitchCase="'select-method'"
+                (stepChange)="setStep($event)"
+            />
+            <app-create-card
+                *ngSwitchCase="'create-card'"
+                (stepChange)="setStep($event)"
+            />
+            <app-confirm-payment
+                *ngSwitchCase="'confirm-payment'"
+                (stepChange)="setStep($event)"
+            />
+        </ng-container>
+    </div>
+</div>

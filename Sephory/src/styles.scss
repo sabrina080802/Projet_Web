@@ -1,0 +1,105 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --bg: #dac2b1;
+    --secondary: rgb(183, 110, 121);
+    --dark-secondary: #d4bba8;
+    --tertiary: rgb(110, 183, 172);
+}
+
+body {
+    background-color: var(--bg);
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    width: 100vw;
+    height: 150px;
+    background-color: rgb(20, 20, 20);
+    margin-top: 10em;
+    border-top: 2px solid var(--tertiary);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+app-root {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        color: var(--secondary);
+        text-transform: capitalize;
+        text-align: center;
+        margin: 0;
+        margin-bottom: .75em;
+        margin-top: 1.5em;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+        button {
+            background-color: var(--tertiary);
+            color: white;
+            border: none;
+            padding: .5em 3em;
+            border-radius: .25em;
+            font-size: 1em;
+            margin: 0;
+            margin-left: 25%;
+            margin-top: .25em;
+            margin-bottom: 1.5em;
+            width: 35%;
+            cursor: pointer;
+        }
+    }
+
+    .signup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        hr {
+            background-color: white;
+            border: none;
+            height: 2px;
+            border-radius: 5px;
+            width: 450px;
+        }
+
+        a {
+            background-color: var(--secondary);
+            border-radius: .5em;
+            padding: .75em;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+    }
+}

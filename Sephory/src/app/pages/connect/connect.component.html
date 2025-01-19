@@ -1,0 +1,15 @@
+<div class="form">
+    <h2>Connexion</h2>
+
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <app-form-group label="email" dataType="email" [(value)]="email" errorMessage="L'email est requis" />
+        <app-form-group label="password" dataType="password" [(value)]="password" errorMessage="Le mot de passe est requis"/>
+
+        <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Se connecter</button>
+    </form>
+    <div class="signup">
+        <hr>
+        <p>Pas encore inscrit ?</p>
+        <a (click)="redirectToRegister()">Inscrivez-vous ici</a>
+    </div>
+</div>

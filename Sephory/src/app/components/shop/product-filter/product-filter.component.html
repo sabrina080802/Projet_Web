@@ -1,0 +1,19 @@
+<ng-container>
+    <form (ngSubmit)="loadProducts()" #filterForm="ngForm">
+      <input name="searchName" type="search" placeholder="Rechercher..." [(ngModel)]="searchName" />
+      
+      <p>Prix minimum : {{ minPrice / 100 | currency: 'EUR' }}</p>
+      <input name="minPrice" type="range" [min]="products.minPrice" [max]="maxPrice" [value]="products.minPrice" [(ngModel)]="minPrice"  step="1"/>
+      <p>Prix maximum : {{ maxPrice / 100 | currency: 'EUR' }}</p>
+      <div>
+        <input name="maxPrice" type="range" [min]="minPrice" [max]="products.maxPrice" [value]="products.maxPrice" [(ngModel)]="maxPrice" step="1"/>
+      </div>
+      <button type="submit">Appliquer les filtres</button>
+
+      <p>Par Catégories :</p>
+      <label *ngFor="let category of categories" class="category" [attr.checked]="category.selected ? true : null">
+          <input name="categories" type="checkbox" value="{{category.id}}" [(ngModel)]="category.selected" (change)="resetPricesAndLoad()">
+          {{category.name}}
+      </label>
+    </form>
+</ng-container>

@@ -1,0 +1,90 @@
+.payment-step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    h2 {
+        color: var(--secondary);
+        padding-bottom: .5em;
+        margin: 0 -1em;
+        margin-bottom: 0;
+        padding: .25em 1em;
+        border-bottom: 4px solid var(--bg);
+        width: 100%;
+    }
+
+    .card-list {
+        width: 100%;
+        flex: 1;
+
+        .card {
+            position: relative;
+            color: black;
+            cursor: pointer;
+            padding: .5em;
+            border-radius: 1em;
+            margin: 1em 0;
+            transition: white .25s ease-out, background-color .25s ease-out;
+
+            p {
+                margin: 0;
+            }
+
+            .owner {
+                font-weight: bold;
+            }
+
+            .number {
+                color: gray;
+                font-style: italic;
+            }
+
+            &[active] {
+                color: white;
+                background-color: var(--tertiary);
+
+                &>button {
+                    opacity: 1;
+                }
+            }
+
+            &>button {
+                position: absolute;
+                background-color: var(--secondary);
+                bottom: 0;
+                right: 0;
+                color: white;
+                border: 2px solid var(--dark-secondary);
+                padding: .25em 1em;
+                border-radius: .5em;
+                font-size: 1em;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .choice-menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        &>button {
+            background-color: var(--tertiary);
+            color: white;
+            border: none;
+            padding: .5em 1.5em;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: .5em;
+            cursor: pointer;
+
+            &:first-of-type {
+                background-color: var(--secondary);
+            }
+        }
+    }
+}

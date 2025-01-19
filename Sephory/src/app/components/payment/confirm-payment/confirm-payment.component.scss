@@ -1,0 +1,37 @@
+.payment-step {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+
+    h2 {
+        color: var(--secondary);
+        padding-bottom: .5em;
+        margin: 0 -1em;
+        margin-bottom: 0;
+        padding: .25em 1em;
+        border-bottom: 4px solid var(--bg);
+        width: 100%;
+    }
+
+    &>p {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        color: black;
+        text-align: center;
+        margin: 3em;
+    }
+
+    &>button {
+        background-color: var(--tertiary);
+        color: white;
+        padding: .75em 1.5em;
+        border-radius: .5em;
+        font-size: 1.2em;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+}

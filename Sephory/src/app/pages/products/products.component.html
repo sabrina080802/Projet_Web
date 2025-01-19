@@ -1,0 +1,11 @@
+<div class="shop">
+    <app-product-filter [pageNumber]="pageNumber" [products]="products" (productsChanged)="onProductsChanged($event)"/>
+    <div class="product-list">
+        <app-product *ngFor="let product of products.data" [product]="product"/>
+    </div>
+    <div class="product-pages" *ngIf="products.pageCount > 0">
+        <button *ngFor="let i of getPageNumbers()" (click)="goToPage(i)" [attr.active]="i == pageNumber ? true : null">
+            {{i}}
+        </button>
+    </div>
+</div>

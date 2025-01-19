@@ -1,0 +1,18 @@
+<div class="form">
+    <h2>Inscription</h2>
+
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <app-form-group label="prénom" dataType="text" [(value)]="firstname" errorMessage="Le nom est requis" />
+        <app-form-group label="nom" dataType="text" [(value)]="lastname" errorMessage="Le prénom est requis" />
+        <app-form-group label="email" dataType="email" [(value)]="email" errorMessage="L'email est requis" />
+        <app-form-group label="Mot de passe" dataType="password" [(value)]="password" errorMessage="Le mot de passe est requis" />
+        <app-form-group label="Confirmez le mot de passe" dataType="password" [(value)]="confirmPassword" errorMessage="La confirmation du mot de passe est requise" />
+
+        <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">S'inscrire</button>
+    </form>
+    <div class="signup">
+        <hr>
+        <p>Déjà inscrit ?</p>
+        <a (click)="redirectToConnect()">Connectez-vous ici</a>
+    </div>
+</div>

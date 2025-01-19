@@ -1,0 +1,31 @@
+const express = require('express');
+const path = require('path');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const fs = require('fs');
+
+const FRONT_URL = 'http://localhost:9534';
+const app = express();
+dotenv.config();
+const PORT = 9533;
+
+app.use(express.json());
+app.use(cors({
+    origin: FRONT_URL,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+const apiRoutesDir = path.join(__dirname, 'routes');
+fs.readdirSync(apiRoutesDir, { recursive: true }).forEach((file) => {
+    if (file.endsWith('.js')) {
+        const route = require(path.join(apiRoutesDir, file).replaceAll('\\', '/'));
+        const routeName = file.replace('.js', '').replaceAll('\\', '/');
+        const routePath = `api/${routeName}`;
+        app.use(route);
+        console.log(`Route -> /${routePath} loaded`);
+    }
+});
+
+app.listen(PORT, '0.0.0.0');
+app.listen(PORT, '::');

@@ -1,0 +1,5 @@
+<ng-container>
+    <label for="{{ label }}">{{ label | titlecase }} :</label>
+    <input type="{{ dataType }}" name="{{ label }}" [(ngModel)]="value" (input)="onInputChange($event)" (blur)="onTouched()" #input="ngModel" [attr.required]="errorMessage.length > 0 ? true : null">
+    <div *ngIf="errorMessage.length > 0" [attr.show]="input.invalid && input.touched ? true : null" class="error-message">{{ errorMessage }}</div>
+</ng-container>

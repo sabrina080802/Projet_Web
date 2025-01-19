@@ -1,0 +1,40 @@
+app-form-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: .5em;
+
+    label {
+        width: 40%;
+        font-size: 1.1em;
+        margin-right: .5em;
+        text-align: right;
+    }
+
+    input {
+        background-color: white;
+        border: none;
+        border-radius: .35em;
+        padding: .5em;
+        font-size: 1em;
+        flex: 1;
+        outline: 0;
+    }
+
+    .error-message {
+        min-width: 100%;
+        text-align: right;
+        color: rgb(236, 33, 33);
+        height: 0;
+        opacity: 0;
+        transition: opacity .2s ease-out, height .2s ease-out;
+    }
+
+    .error-message[show] {
+        opacity: 1;
+        height: 1.5em;
+    }
+}

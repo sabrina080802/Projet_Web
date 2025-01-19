@@ -1,0 +1,20 @@
+<div class="form">
+    <h2>Mon profil</h2>
+
+    <form (ngSubmit)="onSubmit()" #profilForm="ngForm">
+        <app-form-group label="Votre nom" dataType="text" [(value)]="firstname" errorMessage="Le nom est requis"></app-form-group>
+        <app-form-group label="Votre prénom" dataType="text" [(value)]="lastname" errorMessage="Le prénom est requis"></app-form-group>
+        <app-form-group label="Votre adresse" dataType="text" [(value)]="address"></app-form-group>
+        <app-form-group label="Votre code postal" dataType="number" [(value)]="postalCode"></app-form-group>
+        <app-form-group label="Votre pays" dataType="text" [(value)]="country"></app-form-group>
+        <app-form-group label="Votre ville" dataType="text" [(value)]="city"></app-form-group>
+
+        <hr>
+
+        <app-form-group label="Email" dataType="email" [(value)]="email" errorMessage="L'email est requis"></app-form-group>
+        <app-form-group label="Mot de passe" dataType="password" [(value)]="password" errorMessage="Le mot de passe est requis"></app-form-group>
+        <app-form-group *ngIf="password.length > 0" label="Confirmez le mot de passe" dataType="password" [(value)]="confirmPassword" errorMessage="La confirmation du mot de passe est requise"></app-form-group>
+
+        <button type="submit">Sauvegarder</button>
+    </form>
+</div>

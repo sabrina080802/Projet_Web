@@ -1,0 +1,12 @@
+<header>
+    <img src="/photo/logo.png">
+    <nav>
+        <ul>
+            <li><a routerLink="/">Accueil</a></li>
+            <li routerLinkActive="active"><a routerLink="/products">Produits</a></li>
+            <li routerLinkActive="active" *ngIf="!isConnected"><a routerLink="/connect">Connexion</a></li>
+            <li routerLinkActive="active" *ngIf="isConnected"><a routerLink="/profil">Mon profil</a></li>
+            <li routerLinkActive="active" *ngIf="isConnected"><a routerLink="/disconnect">Déconnexion</a></li>
+        </ul>
+    </nav>
+</header>
