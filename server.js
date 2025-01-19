@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const fs = require('fs');
 
-const FRONT_URL = 'http://localhost:9534';
+const FRONT_URL = 'https://projet-web-3xcx.onrender.com';
 const app = express();
 dotenv.config();
 const PORT = 4000;

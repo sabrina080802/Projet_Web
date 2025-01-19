@@ -1,6 +1,6 @@
 {
     "/api": {
-        "target": "http://localhost:9533",
+        "target": "https://projet-web-3xcx.onrender.com:4000",
         "secure": false,
         "changeOrigin": true
     }

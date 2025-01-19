@@ -1,4 +1,4 @@
-export const API_URL = 'http://localhost:9534/api';
+export const API_URL = 'https://projet-web-3xcx.onrender.com:4000/api';
 
 export interface ApiResponse<T> {
     success: boolean,
