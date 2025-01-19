@@ -7,7 +7,7 @@ const fs = require('fs');
 const FRONT_URL = 'http://localhost:9534';
 const app = express();
 dotenv.config();
-const PORT = 9533;
+const PORT = 8080;
 
 app.use(express.json());
 app.use(cors({

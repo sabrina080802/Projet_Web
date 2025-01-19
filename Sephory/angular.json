@@ -74,7 +74,7 @@
           "options": {
             "proxyConfig": "proxy.conf.json",
             "host": "0.0.0.0",
-            "port": 9534
+            "port": 80
           }
         },
         "extract-i18n": {
